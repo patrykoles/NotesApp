@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Login</h1>
+    {% if error %}
+        <p class="err">{{ error }}</p>
+    {% endif %}
+    <form method="POST" action="{{ url_for('auth.login') }}">
+        <label>Username:</label><br>
+        <input type="text" name="username" required><br>
+        <label>Password:</label><br>
+        <input type="password" name="password" required><br>
+        <label>2FA Code (Google Authenticator):</label><br>
+        <input type="text" name="totp_code" required><br>
+
+        <input type="hidden" name="csrf_token" value = "{{ csrf_token() }}" />
+        <input type="text" name="honeypot" class="honeypot">
+
+        <button type="submit">Login</button>
+    </form>
+    <a href="{{ url_for('pass_control.forgot_password') }}">Forgot password?</a> | 
+    <a href="{{ url_for('home.home') }}">Back to Home</a>
+</body>
+</html>

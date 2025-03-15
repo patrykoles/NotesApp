@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verify Signature</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Note's verifivation status:</h1>
+    <h3>{{ verification_status }}</h3>
+    <div class="content">
+        <label>User's public key:</label>
+        <pre>{{ public_key }}</pre>
+    </div>
+
+    <div class="content">
+        <label>Note's hash:</label>
+        <pre>{{ note_hash }}</pre>
+    </div>
+
+    <div class="content">
+        <label>Note's signature:</label>
+        <pre>{{ signature }}</pre>
+    </div>
+
+    <div class="content">
+        <label>Note's content:</label>
+        <pre>{{ note_content }}</pre>
+    </div>
+    <a href="{{ url_for('notes.view_note_page', note_id=note[0]) }}">Back to the note</a>
+</body>
+</html>

@@ -1,0 +1,11 @@
+flask
+uwsgi
+pyotp
+qrcode[pil]
+markdown
+bleach
+itsdangerous
+PyCryptodome
+passlib
+python-dotenv
+flask_wtf

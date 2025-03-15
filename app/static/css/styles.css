@@ -1,0 +1,39 @@
+.err{
+    color: red;
+}
+
+.honeypot{
+    display: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+td {
+    padding: 10px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.content pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: monospace;
+}

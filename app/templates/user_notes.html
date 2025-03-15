@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User notes</title>
+</head>
+<body>
+    <h1>{{noteuser}} Notes</h1>
+    {% if notes %}
+        <ul>
+        {% for note in notes %}
+            <li>
+                <a href="{{ url_for('notes.view_note_page', note_id=note[0]) }}">{{ note[5] }}</a>
+                <small>by {{ note[3] }}</small>
+                <small>on {{ note[4] }}</small>
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No notes available.</p>
+    {% endif %}
+    <a href="{{ url_for('home.home') }}">Back to Home</a>
+</body>
+</html>

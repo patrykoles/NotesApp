@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register with TOTP</title>
+</head>
+<body>
+    <p>If you are registering for 2FA, scan the following QR code:</p>
+    <img src="data:image/png;base64,{{ qr_code_img }}" alt="QR Code">
+    <p>Now, you can login to your new account</p>
+    <a href="{{ url_for('home.home') }}">Back to Home</a>
+</body>
+</html>
