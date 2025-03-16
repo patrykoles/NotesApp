@@ -2,8 +2,8 @@
 ## Description
 This Flask-based application provides a secure platform for posting and viewing markdown notes. Users can create, update, and view notes, which are validated and sanitized to prevent malicious content. Key security features include:
 
-- Password Hashing: Passwords are securely hashed using industry-standard algorithms.
-- Two-Factor Authentication (TOTP): Users can enable TOTP-based two-factor authentication for enhanced security.
+- Password Hashing: Passwords are securely hashed.
+- Two-Factor Authentication (TOTP): Users must use TOTP-based two-factor authentication for enhanced security.
 - RSA Signatures: Notes are signed with RSA keys to ensure authenticity and integrity.
 - CSRF Protection: The app uses CSRF tokens to prevent cross-site request forgery attacks.
 - Honeypot Mechanisms: Extra measures to protect against bots and spam.
