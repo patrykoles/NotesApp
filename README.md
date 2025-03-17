@@ -15,7 +15,9 @@ This Flask-based application provides a secure platform for posting and viewing 
 - **Content Validation and Sanitization**: All note content is validated and sanitized to avoid malicious input.
 The application is designed with security in mind, ensuring that sensitive data is protected and that user interactions are secure.
 ## Deployment
-In order to run the app use
+In order to run the app add `.env` file in `NotesApp/app` directory.
+Add **APP_SECRET_KEY**, **TOTP_SECRET_KEY** and **PRIVATE_KEY_PEPPER** variables to `.env` file.
+Then go to main directory and run:
 ```sh
 docker-compose up --build
 ```
